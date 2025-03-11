@@ -20,7 +20,7 @@ namespace WpfApp4
         {
             InitializeComponent();
         }
-
+        public string hasloPubliczne;
         private void B_ginner_Click(object sender, RoutedEventArgs e)
         {
             int ileZnaków = TB_znaki.Text.Length;
@@ -67,6 +67,7 @@ namespace WpfApp4
                 hasloMieszane = hasloMieszane.Remove(index, 1);
             }
 
+            hasloPubliczne = hasloMieszane;
             MessageBox.Show($"Wygenerowane hasło: {hasloMieszane}");
         }
 
@@ -74,7 +75,31 @@ namespace WpfApp4
         {
             string imie = TB_imie.Text;
             string nazwisko = TB_nazwisko.Text;
-            //
+            string kierownik = LBI_kierownik.Content.ToString();
+            string starszy = LBI_starszy.Content.ToString();
+            string mlodszy = LBI_mlodszy.Content.ToString();
+            string tester = LBI_tester.Content.ToString();
+
+            if (LBI_kierownik.IsSelected == true)
+            {
+                MessageBox.Show($"{imie} {nazwisko} {kierownik}, {hasloPubliczne}");
+            }
+            else if (LBI_starszy.IsSelected == true)
+            {
+                MessageBox.Show($"{imie} {nazwisko} {starszy}, {hasloPubliczne}");
+            }
+            else if (LBI_mlodszy.IsSelected == true)
+            {
+                MessageBox.Show($"{imie} {nazwisko} {mlodszy}, {hasloPubliczne}");
+            }
+            else if (LBI_tester.IsSelected == true)
+            {
+                MessageBox.Show($"{imie} {nazwisko} {tester}, {hasloPubliczne}");
+            }
+            else
+            {
+                MessageBox.Show($"{imie} {nazwisko}, {hasloPubliczne}");
+            }
         }
     }
 }

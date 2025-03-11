@@ -17,7 +17,7 @@
                 <ListBox Name="LB_lista" Margin="108,158,10,10">
                     <ListBoxItem Name="LBI_kierownik" Content="Kierownik"/>
                     <ListBoxItem Name="LBI_starszy" Content="Starszy programista"/>
-                    <ListBoxItem Name="LBI_mlodsy" Content="Młodszy programista"/>
+                    <ListBoxItem Name="LBI_mlodszy" Content="Młodszy programista"/>
                     <ListBoxItem Name="LBI_tester" Content="Tester"/>
                 </ListBox>
             </Grid>
